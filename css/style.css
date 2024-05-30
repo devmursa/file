@@ -37,10 +37,99 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  color: #f7f7f7; }
+  color: #171616; }
 
 .container {
   background-color: var(--color-grey-light-2);
   max-width: 120rem;
-  min-height: 50rem;
-  box-sizing: 0 2rem 5rem rgba(0, 0, 0, 0.3); }
+  min-height: 60rem;
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  margin: 8rem auto; }
+
+.header {
+  height: 7rem;
+  background-color: #fff;
+  border-bottom: var(--color-grey-light-2);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; }
+
+.content {
+  display: flex;
+  flex-direction: row;
+  height: 53rem; }
+
+.sidebar {
+  background-color: var(--color-grey-dark-1);
+  flex: 0 0 20%; }
+
+.hotel-view {
+  background-color: var(--color-grey-light-2);
+  flex: 1; }
+
+.logo {
+  margin: 0 2rem; }
+  .logo_img {
+    height: 3.7rem;
+    padding: .25rem; }
+
+.form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .form_search {
+    background-color: var(--color-grey-light-3);
+    border: none;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    border: none;
+    padding: .7rem 1.5rem;
+    border-radius: 10rem;
+    width: 40%;
+    margin-right: -4rem;
+    transition: all .3s; }
+    .form_search::placeholder {
+      font-family: inherit;
+      font-weight: 100;
+      font-size: inherit; }
+    .form_search:focus {
+      outline: none;
+      width: 50%; }
+  .form_btn {
+    border: none;
+    padding-top: .5rem; }
+    .form_btn:hover > * {
+      fill: var(--color-grey-dark-2); }
+  .form_icon {
+    height: 2rem;
+    width: 2.8rem;
+    fill: var(--color-grey-dark-1); }
+    .form_icon:active {
+      fill: var(--color-grey-dark-2);
+      transform: scale(0.98); }
+
+.user-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .user-nav_icon_box {
+    position: relative; }
+  .user-nav_bookmark {
+    height: 2rem;
+    width: 5rem; }
+    .user-nav_bookmark > * {
+      height: 100%;
+      width: 100%; }
+  .user-nav_chat {
+    height: 2.5rem;
+    width: 4rem; }
+    .user-nav_chat > * {
+      height: 100%;
+      width: 100%; }
+  .user-nav_img {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%; }

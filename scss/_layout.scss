@@ -1,25 +1,157 @@
 .container{
 background-color: var(--color-grey-light-2);
 max-width: 120rem;
-min-height: 50rem;
-box-sizing: 0 2rem 5rem rgba(0,0,0,.3);
-margin: 6rem auto;
-
+min-height: 60rem;
+box-shadow: 0 2rem 6rem rgba(0, 0, 0,.3);
+margin: 8rem auto;
 }
 
 .header{
-
+height: 7rem;
+background-color: #fff;
+border-bottom: var(--color-grey-light-2);
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
 
 }
 
 .content{
-
+   display: flex;
+   flex-direction: row;
+   height: 53rem;
 }
 
-.side-bar{
+.sidebar{
+background-color: var(--color-grey-dark-1);
+flex: 0 0 20%;
+
 
 }
 
 .hotel-view{
+    background-color: var(--color-grey-light-2);
+    flex: 1;
 
+}
+
+// header layout start
+
+
+.logo{
+    margin: 0 2rem;
+    &_img{
+        height: 3.7rem;
+        padding: .25rem;
+    }
+}
+
+.form{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+    &_search{
+        background-color: var(--color-grey-light-3);
+        border: none;
+        font-family: inherit;
+        font-weight: inherit;
+        font-size: inherit;
+        border: none;
+        padding: .7rem 1.5rem;
+        border-radius: 10rem;
+        width:  40%;
+        margin-right: -4rem;
+        transition: all .3s;
+
+        
+
+        &::placeholder{
+            font-family: inherit;
+        font-weight: 100;
+        font-size: inherit;
+        }
+
+        &:focus{
+            outline: none;
+            width:  50%;
+        }
+        &:active{
+            // outline: none;
+            
+        }
+
+
+    }
+
+    &_btn{
+        border: none;
+        padding-top: .5rem;
+
+        &:hover > *{
+            fill: var(--color-grey-dark-2);
+        }
+        
+    }
+
+    &_icon{
+        height: 2rem;
+        width: 2.8rem;
+        fill: var(--color-grey-dark-1);
+        
+  
+    &:active{
+        fill: var(--color-grey-dark-2);
+        transform: scale(.98);
+    }
+    }
+}
+
+.user-nav{
+
+    display: flex;
+    // flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    &_icon_box{
+        position: relative;
+    }
+
+    &_bookmark{
+
+        height: 2rem;
+        width: 5rem;
+
+        &>*{
+            height: 100%;
+            width:  100%;
+        }
+    }
+
+    &_chat{
+        height: 2.5rem;
+        width: 4rem;
+        
+        &>*{
+            height: 100%;
+            width:  100%;
+        }
+    }
+
+    &_box{
+
+    }
+
+    &_img{
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+    }
+
+    &_user-name{
+
+    }
 }
