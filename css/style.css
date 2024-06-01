@@ -75,10 +75,10 @@ body {
     padding: .25rem; }
 
 .form {
-  width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  flex: 0 0 40%; }
   .form_search {
     background-color: var(--color-grey-light-3);
     border: none;
@@ -88,7 +88,7 @@ body {
     border: none;
     padding: .7rem 1.5rem;
     border-radius: 10rem;
-    width: 40%;
+    width: 85%;
     margin-right: -4rem;
     transition: all .3s; }
     .form_search::placeholder {
@@ -97,7 +97,7 @@ body {
       font-size: inherit; }
     .form_search:focus {
       outline: none;
-      width: 50%; }
+      width: 100%; }
   .form_btn {
     border: none;
     padding-top: .5rem; }
@@ -106,29 +106,67 @@ body {
   .form_icon {
     height: 2rem;
     width: 2.8rem;
-    fill: var(--color-grey-dark-1); }
-    .form_icon:active {
-      fill: var(--color-grey-dark-2);
+    fill: var(--color-grey-dark-2); }
+    .form_icon:active, .form_icon:hover {
+      fill: var(--color-grey-dark-1);
       transform: scale(0.98); }
 
+.form_search:focus + .form_btn > * {
+  fill: var(--color-grey-dark-1); }
+
 .user-nav {
+  height: 100%;
+  width: 25%;
   display: flex;
   align-items: center;
   justify-content: space-between; }
   .user-nav_icon_box {
     position: relative; }
   .user-nav_bookmark {
-    height: 2rem;
-    width: 5rem; }
+    height: 2.5rem;
+    width: 5rem;
+    align-self: center; }
     .user-nav_bookmark > * {
-      height: 100%;
-      width: 100%; }
+      fill: var(--color-grey-dark-2);
+      position: absolute; }
+  .user-nav_bookmark_notification {
+    position: absolute;
+    font-size: 1rem;
+    top: 1.2rem;
+    right: .5rem;
+    height: 1.8rem;
+    width: 1.8rem;
+    background-color: red;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff; }
   .user-nav_chat {
     height: 2.5rem;
     width: 4rem; }
     .user-nav_chat > * {
-      height: 100%;
-      width: 100%; }
+      fill: var(--color-grey-dark-2);
+      position: absolute; }
+  .user-nav_chat_notification {
+    position: absolute;
+    font-size: 1rem;
+    top: 1.2rem;
+    right: -.1rem;
+    height: 1.8rem;
+    width: 1.8rem;
+    background-color: red;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff; }
+  .user-nav_box {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 50%;
+    justify-content: center;
+    align-items: center; }
   .user-nav_img {
     height: 4rem;
     width: 4rem;
